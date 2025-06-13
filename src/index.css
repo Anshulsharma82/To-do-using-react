@@ -137,9 +137,9 @@ body {
     font-weight: bold;
 }
 .createToDo input:focus {
-    outline-color: rgb(149, 4, 4);
+    /* outline-color: rgb(149, 4, 4); */
     outline-width: 2px;
-    transform: scale(1.1);
+    transform: scale(1.05);
     
 }
 .createToDo input:focus::placeholder {
