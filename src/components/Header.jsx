@@ -25,7 +25,7 @@ export default function Header(props) {
                 <h1>TO-DO APP</h1>
                 <div className="headerBottomContent">
                     <p >Reminds Everything...</p>
-                    <a>Github Link</a>
+                    <a href="https://github.com/Anshulsharma82/To-do-using-react.git" target="_blank">Github Link</a>
                 </div>
             </header>
             <p className="errorP">{errorMsg}</p>

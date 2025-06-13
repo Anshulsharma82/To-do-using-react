@@ -1,12 +1,35 @@
-# React + Vite
+# To-Do Application
+A simple yet functional To-Do application built with React.js and Vite. Designed to help users manage daily tasks with ease. The app allows users to create, update, mark as complete, and delete tasks — all in a clean, responsive interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Add Tasks – Quickly add new tasks with a clean input interface.
+- Edit Existing Tasks – Modify your to-dos directly without deleting or recreating them.
+- Mark as Completed – Visually differentiate completed tasks to track your progress.
+- Delete Tasks – Remove completed or unwanted tasks with one click.
+- Clear & Intuitive UI – Focused design that puts your tasks front and center.
+- Responsive Design – Works seamlessly on mobile, tablet, and desktop.
 
-Currently, two official plugins are available:
+## Project Setup Instructions
+### 1. Clone the repository
+```bash
+git clone https://github.com/Anshulsharma82/To-do-using-react.git
+cd To-do-using-react
+```
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to run locally
+```bash
+npm run dev
+```
+Then open http://localhost:5173 in your browser.
 
-## Expanding the ESLint configuration
+## Screenshots
+![Screenshot](./src/screenshots/Screenshot_1.png)
+![Screenshot](./src/screenshots/Screenshot_2.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Github Link
+https://github.com/Anshulsharma82/To-do-using-react
+
