@@ -22,11 +22,13 @@ export default function Header(props) {
     return (
         <>
             <header className="headerContainer">
-                <h1>TO-DO APP</h1>
-                <div className="headerBottomContent">
+                <div>
+                    <h1>TO-DO APP</h1>
                     <p >Reminds Everything...</p>
-                    <a href="https://github.com/Anshulsharma82/To-do-using-react.git" target="_blank">Github Link</a>
                 </div>
+                <a title="source code" href="https://github.com/Anshulsharma82/To-do-using-react.git" target="_blank">
+                    <img src="/github_logo.png" alt="" />GITHUB
+                </a>
             </header>
             <p className="errorP">{errorMsg}</p>
             <div className="createToDo">

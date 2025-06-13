@@ -17,9 +17,12 @@ export default function ToDoItem(props) {
                     {!isEditing ? <h3>{editingTaskValue} </h3> : <input className="editInput" type="text" value={editingTaskValue} onChange={(e) => setEditingTaskValue(e.target.value)} />}
                 </div>
                 <div className="modifyButtonsDiv">
-                    { !props.item.completed ? !isEditing ? <button onClick={editToDo}><i class="fa-solid fa-pen-to-square fa-xl"></i></button> : <button onClick={() => props.saveToDo(props.item.key,editingTaskValue,setIsEditing)}><i class="fa-regular fa-floppy-disk fa-xl"></i></button> : ''}
-                    {!props.item.completed ? <button onClick={() => props.taskCompleted(props.item.key)} > <i class="fa-solid fa-circle-check fa-xl"></i> </button> : "" }
-                    <button onClick={ () => props.deleteTask(props.item.key)}> <i class="fa-solid fa-trash fa-xl"></i> </button>
+                    {/* Edit button */}
+                    { !props.item.completed ? !isEditing ? <button title="edit" onClick={editToDo}><i class="fa-solid fa-pen-to-square fa-xl"></i></button> : <button title="save" onClick={() => props.saveToDo(props.item.key,editingTaskValue,setIsEditing)}><i class="fa-regular fa-floppy-disk fa-xl"></i></button> : ''}
+                    {/* Mark as done button */}
+                    {!props.item.completed ? <button title="done" onClick={() => props.taskCompleted(props.item.key)} > <i class="fa-solid fa-circle-check fa-xl"></i> </button> : "" }
+                    {/* delete button. */}
+                    <button title="delete" onClick={ () => props.deleteTask(props.item.key)}> <i class="fa-solid fa-trash fa-xl"></i> </button>
                 </div>
             </div>
         </>
