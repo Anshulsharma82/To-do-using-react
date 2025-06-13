@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+.errorP {
+    text-align: center;
+    color: red;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 20px;
+    
+}
+.headerContainer {
+    text-align: center;
+    background-color: rgb(183, 180, 180);
+    padding: 6px 0 10px 0;
+}
+.headerBottomContent {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.headerBottomContent p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.headerBottomContent a{
+  margin-left: auto;
+  margin-right: 10px;
+  text-decoration: underline;
+  color: rgb(6, 6, 230);
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.headerBottomContent a:hover {
+    color: blue;
+
+}
+.headerContainer h1 {
+    font-size: 48px;
+}
+.headerContainer p {
+    font-size: 20px;
+    color: gray;
+}
+.createToDo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* border: 1px solid gainsboro; */
+    /* box-shadow: 0 0 0 0.5px gray; */
+    width: 60%;
+    margin: 30px auto 0 auto;
+}
+.createToDo h2 {
+    font-size: 30px;
+}
+.createToDo div {
+    /* border: 0.1px solid gray; */
+    /* border-radius: 20px; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.createToDo div:nth-child(1) {
+    border: 2px solid gray;
+    flex-direction: column;
+    width: 25%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(3, 219, 219);
+    color: white;
+    
+}
+   
+.createToDo div:nth-child(2) {
+    border: 2px solid gray;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 0px;
+    width: 75%;
+} 
+.createToDo input {
+    width: 70%;
+    padding: 14px;
+    border: 2px solid gray;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    font-size: 18px;
+    background-color: gainsboro;
+}
+.createToDo input::placeholder {
+    color: #aaa;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+.createToDo input:focus {
+    outline-color: rgb(149, 4, 4);
+    outline-width: 2px;
+    
+}
+.createToDo input:focus::placeholder {
+    opacity: 0;
+}
+.createToDo button {
+    font-size: 24px;
+    padding: 12px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-left: 0px;
+    border:1px solid gainsboro;
+    background-color: rgb(3, 219, 219);
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+.createToDo button:hover {
+    transform: scale(1.03);
+    background-color: rgb(15, 184, 184);
+    border-color: rgb(149, 4, 4);
+    border-width: 2px;
+}
+
+.toDoListDiv {
+    margin: 20px auto 0 auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.toDoListDiv h2 {
+    color: rgb(6, 156, 156);
+    font-size: 30px;
+    text-align: center;
+}
+.noTaskP {
+    text-align: center;
+    color: rgb(165, 3, 3);
+    margin: 10px 0px;
+    font-weight: 800;
+    font-style: italic;
+
+}
+.toDoListInternalDiv {
+    border: 2px solid gainsboro;
+    /* border-radius: 20px; */
+    margin: 8px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+}
+.toDoItem:nth-child(1) {
+    margin-top: 30px;
+}
+.toDoItem:last-child {
+    margin-bottom: 30px;
+}
+.toDoItem {
+    border: 1px solid silver;
+    margin:0px 40px;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: gainsboro;
+    gap: 30px;
+     
+} 
+.taskCompletedP {
+    color: white;
+    padding: 4px;
+    width: 120px;
+    font-size: 16px;
+    background-color: green;
+    font-weight: 900;
+}
+.toDoItem div:nth-child(1) {
+    width: 70%;
+    /* text-align: justify; */
+}
+.editInput {
+    width: 80%;
+    padding: 12px;
+    /* background-color: yellow; */
+    border-radius: 20px;
+}
+.modifyButtonsDiv {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.modifyButtonsDiv button {
+    border-width: 0px;
+    padding: 12px 16px;
+    font-size: 18px;
+    margin-right: 4px;
+    cursor: pointer;
+    background-color: rgb(4, 201, 201);
+    /* color: white; */
+    border-radius: 4px;
+}
+.modifyButtonsDiv button:hover {
+    background-color: rgb(9, 239, 239);
+    color: white;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #aaa;
+    padding: 4px;
+    text-align: center;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; */
+}
+footer a {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+@media (max-width: 1150px) {
+    .toDoItem {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .toDoItem > div {
+        width: 100%;
+    }
+    .toDoItem div:nth-child(1) {
+        width: 100%;
+    }
+    .modifyButtonsDiv {
+        justify-content: start;
+    }
+    .modifyButtonsDiv button {
+        font-size: 16px;
+
+    }
+}
+
+@media (max-width: 1000px) {
+    .createToDo {
+        flex-direction: column;
+        height: auto;
+        width: 80%;
+        
+    }
+    .createToDo div:nth-child(1) {
+        width: 40%;
+        height: 60px;        
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        flex-direction: row;
+        /* align-self: flex-start; */
+        border-top-right-radius:16px ;
+        border-bottom-right-radius: 16px;
+    }
+    .createToDo div:nth-child(2) {
+        margin-top: 10px;
+        /* height: 60%; */
+        width: 100%;
+        border-width: 0px;;
+    }
+    .createToDo input {
+        width: 80%;
+    }
+
+    .createToDo button {
+        width: 20%;
+    }
+    
+    .toDoListDiv {
+        width: 80%;
+    }
+    
+}
+@media (max-width: 720px) {
+    .createToDo div:nth-child(1) {
+        width: 60%;
+    }
+}
+@media (max-width: 500px) {
+    .createToDo div:nth-child(1) {
+        width: 80%;
+    }
+}
+@media (max-width: 550px) {
+    
+     
+    .createToDo input {
+        width: 70%;
+    }
+    .createToDo button {
+        width: 30%;
+    }
+}
