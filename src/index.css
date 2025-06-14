@@ -4,9 +4,22 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #f8f9fa;
+    background: linear-gradient(270deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
     display: flex;
     flex-direction: column;
+    animation: gradientShift 15s ease infinite;
+    background-size: 800% 800%;
+}
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 .errorP {
     text-align: center;
@@ -63,10 +76,20 @@ body {
     color: rgb(3, 51, 51);
     font-weight: 900;
     font-size: 48px;
+    text-shadow: 4px 4px 8px aqua;
+    transition: text-shadow 1s linear;
+}
+.headerContainer h1:hover {
+    text-shadow: 6px 6px 12px rgb(3, 199, 199);
 }
 .headerContainer p {
     font-size: 20px;
     color: gray;
+    text-shadow: 0.5px 0.5px 1px aqua;
+}
+.headerContainer p:hover {
+    transition: text-shadow 1s linear;
+    text-shadow: 1px 1px 2px aqua;
 }
 .createToDo {
     display: flex;
@@ -157,13 +180,14 @@ body {
     cursor: pointer;
     font-weight: bolder;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s linear;
+    transition: all 0.5s linear;
 }
 .createToDo button:hover {
-    transform: scale(1.05);
-    background-color: rgb(81, 247, 247);
+    transform: scale(1.03);
+    /* background-color: rgb(81, 247, 247); */
     /* border-color: rgb(149, 4, 4); */
     border-width: 2px;
+    box-shadow: 4px 4px 4px gray;
 }
 
 .toDoListDiv {
@@ -210,15 +234,21 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: gainsboro;
-    gap: 30px;
-     
+    gap: 30px;   
+    transition: all 0.8s linear;
 } 
+.toDoItem:hover {
+    transform: scale(1.01);
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 4px aqua, -2px -2px 4px orange;
+}
 .taskCompletedP {
     color: white;
-    padding: 4px;
-    width: 120px;
+    padding: 2px;
+    width: 180px;
+    text-align: center;
     font-size: 16px;
-    background-color: green;
+    background-color: #c48c79;
     font-weight: 900;
 }
 .toDoItem div:nth-child(1) {
@@ -340,18 +370,33 @@ footer a {
         width: 60%;
     }
 }
-@media (max-width: 500px) {
-    .createToDo div:nth-child(1) {
-        width: 80%;
-    }
-}
-@media (max-width: 550px) {
-    
-     
+@media (max-width: 550px) {    
     .createToDo input {
         width: 70%;
     }
     .createToDo button {
         width: 30%;
+    }
+    .headerContainer h1 {
+        font-size: 34px;
+    }
+    .headerContainer a {
+        margin-right: 0;
+    }
+    .headerContainer img {
+        height: 40px;
+        width: 50px;
+    }
+    @keyframes move {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-2px); }  
+  50%  { transform: translateY(2px); }  
+  75%  { transform: translateY(-2px); }  
+  100% { transform: translateY(0); }    
+}
+}
+@media (max-width: 500px) {
+    .createToDo div:nth-child(1) {
+        width: 80%;
     }
 }
